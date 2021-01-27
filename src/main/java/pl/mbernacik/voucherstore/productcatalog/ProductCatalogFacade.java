@@ -4,6 +4,10 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.UUID;
 
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.UUID;
+
 public class ProductCatalogFacade {
     ProductStorage productStorage;
 
@@ -31,12 +35,16 @@ public class ProductCatalogFacade {
 
         product.setDescription(myDescription);
         product.setPicture(myPicture);
+
+        productStorage.save(product);
     }
 
     public void applyPrice(String productId, BigDecimal price) {
         Product product = getProductOrException(productId);
 
         product.setPrice(price);
+
+        productStorage.save(product);
     }
 
     public List<Product> allPublishedProducts() {
