@@ -1,6 +1,7 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.basket;
 
 import pl.mbernacik.voucherstore.productcatalog.Product;
+import pl.mbernacik.voucherstore.sales.Inventory;
 import pl.mbernacik.voucherstore.sales.exceptions.NotEnoughProductsException;
 
 import java.util.*;

@@ -1,8 +1,11 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.basket;
 
 
 import org.junit.Test;
 import pl.mbernacik.voucherstore.productcatalog.Product;
+import pl.mbernacik.voucherstore.sales.Inventory;
+import pl.mbernacik.voucherstore.sales.basket.Basket;
+import pl.mbernacik.voucherstore.sales.basket.BasketLine;
 
 import java.util.UUID;
 

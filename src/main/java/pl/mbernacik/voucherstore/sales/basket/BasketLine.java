@@ -1,4 +1,4 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.basket;
 
 public class BasketLine {
     private String productId;

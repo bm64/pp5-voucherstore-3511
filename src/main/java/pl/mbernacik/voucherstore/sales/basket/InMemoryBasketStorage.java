@@ -1,4 +1,4 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.basket;
 
 import java.util.Map;
 import java.util.Optional;
