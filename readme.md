@@ -11,9 +11,9 @@ mvn test
 ### testing via curl
 
 ```bash
-curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Kuba", "lastname": "Kanclerz", "address": {"street": "rakowicka"}}'
-curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Kuba", "lastname": "Kanclerz", "address": {"street": "rakowicka"}}'
-curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Kuba", "lastname": "Kanclerz", "address": {"street": "rakowicka"}}'
+curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Mateusz", "lastname": "Bernacik", "address": {"street": "rakowicka"}}'
+curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Mateusz", "lastname": "Bernacik", "address": {"street": "rakowicka"}}'
+curl -X POST localhost:9999/api/clients -H 'content-type: application/json' -d '{"firstname": "Mateusz", "lastname": "Bernacik", "address": {"street": "rakowicka"}}'
 
 curl localhost:9999/api/clients | jq
 curl localhost:9999/api/clients | python -m json.tool
