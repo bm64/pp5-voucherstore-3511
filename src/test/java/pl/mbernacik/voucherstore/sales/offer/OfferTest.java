@@ -3,14 +3,13 @@ package pl.mbernacik.voucherstore.sales.offer;
 
 import org.junit.Test;
 import pl.mbernacik.voucherstore.sales.basket.BasketLine;
-import pl.mbernacik.voucherstore.sales.offer.Offer;
-import pl.mbernacik.voucherstore.sales.offer.OfferMaker;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import static org.assertj.core.api.Assertions.*;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class OfferTest {
     @Test
