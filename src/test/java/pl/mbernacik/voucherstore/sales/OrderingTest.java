@@ -13,7 +13,8 @@ public class OrderingTest extends SalesTestCase {
         basketStorage = thereIsBasketStorage();
         inventory = therIsInventory();
         currentCustomerContext = thereIsCurrentCustomerContext();
-        offerMaker = thereIsOfferMaker(productCatalog);    }
+        offerMaker = thereIsOfferMaker(productCatalog);
+    }
 
     @Test
     public void itCreatesReservationBasedOnCurrentOffer() {
@@ -29,9 +30,13 @@ public class OrderingTest extends SalesTestCase {
         salesFacade.addProduct(productId2);
         Offer seenOffer = salesFacade.getCurrentOffer();
 
-        String reservationId = salesFacade.acceptOffer(seenOffer);
+        String reservationId = salesFacade.acceptOffer(seenOffer, clientProvideHisData());
 
         thereIsPendingReservationWithId(reservationId);
+    }
+
+    private ClientData clientProvideHisData() {
+        return new ClientData();
     }
 
     private void thereIsPendingReservationWithId(String reservationId) {

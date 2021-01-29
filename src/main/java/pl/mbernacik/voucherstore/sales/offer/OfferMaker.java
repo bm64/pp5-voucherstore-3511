@@ -1,6 +1,8 @@
 package pl.mbernacik.voucherstore.sales.offer;
 
 import pl.mbernacik.voucherstore.sales.basket.BasketLine;
+import pl.mbernacik.voucherstore.sales.product.ProductDetails;
+import pl.mbernacik.voucherstore.sales.product.ProductDetailsProvider;
 
 import java.math.BigDecimal;
 import java.util.List;

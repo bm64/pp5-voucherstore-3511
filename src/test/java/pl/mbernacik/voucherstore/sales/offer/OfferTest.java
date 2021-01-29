@@ -1,8 +1,10 @@
 package pl.mbernacik.voucherstore.sales.offer;
 
 
+
 import org.junit.Test;
 import pl.mbernacik.voucherstore.sales.basket.BasketLine;
+import pl.mbernacik.voucherstore.sales.product.ProductDetails;
 
 import java.math.BigDecimal;
 import java.util.Arrays;

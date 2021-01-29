@@ -5,7 +5,7 @@ import pl.mbernacik.voucherstore.productcatalog.ProductCatalogConfiguration;
 import pl.mbernacik.voucherstore.productcatalog.ProductCatalogFacade;
 import pl.mbernacik.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mbernacik.voucherstore.sales.offer.OfferMaker;
-import pl.mbernacik.voucherstore.sales.offer.ProductDetails;
+import pl.mbernacik.voucherstore.sales.product.ProductDetails;
 
 import java.math.BigDecimal;
 import java.util.UUID;
