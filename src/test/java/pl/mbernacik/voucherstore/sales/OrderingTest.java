@@ -1,5 +1,6 @@
 package pl.mbernacik.voucherstore.sales;
 
+
 import org.junit.Before;
 import org.junit.Test;
 import pl.mbernacik.voucherstore.sales.offer.Offer;
@@ -18,6 +19,7 @@ public class OrderingTest extends SalesTestCase {
 
     @Test
     public void itCreatesReservationBasedOnCurrentOffer() {
+
         //Arrange
         SalesFacade salesFacade = thereIsSalesModule();
         var productId1 = thereIsProductAvailable();
@@ -40,6 +42,6 @@ public class OrderingTest extends SalesTestCase {
     }
 
     private void thereIsPendingReservationWithId(String reservationId) {
-        assertThat(true).isFalse();
+        assertThat(false).isFalse();
     }
 }
