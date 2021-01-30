@@ -3,6 +3,11 @@ package pl.mbernacik.payu;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import pl.mbernacik.payu.exceptions.PayUException;
+import pl.mbernacik.payu.http.PayUApiClient;
+import pl.mbernacik.payu.model.CreateOrderResponse;
+import pl.mbernacik.payu.model.OrderCreateRequest;
+import pl.mbernacik.payu.model.TokenResponse;
 
 import java.net.http.HttpResponse;
 import java.util.Map;
@@ -10,11 +15,11 @@ import java.util.Map;
 public class PayU {
     public static final int HTTP_FORBIDDEN = 401;
     private final PayUCredentials credentials;
-    private final JavaHttpPayUApiClient http;
+    private final PayUApiClient http;
     private final ObjectMapper om;
     private TokenResponse token;
 
-    public PayU(PayUCredentials credentials, JavaHttpPayUApiClient http) {
+    public PayU(PayUCredentials credentials, PayUApiClient http) {
         this.credentials = credentials;
         this.http = http;
         this.om = new ObjectMapper();

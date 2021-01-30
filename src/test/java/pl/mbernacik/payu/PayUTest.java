@@ -2,6 +2,12 @@ package pl.mbernacik.payu;
 
 
 import org.junit.Test;
+import pl.mbernacik.payu.exceptions.PayUException;
+import pl.mbernacik.payu.http.JavaHttpPayUApiClient;
+import pl.mbernacik.payu.model.Buyer;
+import pl.mbernacik.payu.model.CreateOrderResponse;
+import pl.mbernacik.payu.model.OrderCreateRequest;
+import pl.mbernacik.payu.model.Product;
 
 import java.util.Arrays;
 import java.util.UUID;

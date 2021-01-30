@@ -1,4 +1,4 @@
-package pl.mbernacik.payu;
+package pl.mbernacik.payu.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

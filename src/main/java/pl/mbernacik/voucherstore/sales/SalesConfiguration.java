@@ -3,7 +3,7 @@ package pl.mbernacik.voucherstore.sales;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import pl.mbernacik.payu.JavaHttpPayUApiClient;
+import pl.mbernacik.payu.http.JavaHttpPayUApiClient;
 import pl.mbernacik.payu.PayU;
 import pl.mbernacik.payu.PayUCredentials;
 import pl.mbernacik.voucherstore.productcatalog.ProductCatalogFacade;

@@ -1,4 +1,4 @@
-package pl.mbernacik.payu;
+package pl.mbernacik.payu.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
