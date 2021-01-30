@@ -1,5 +1,6 @@
 package pl.mbernacik.payu;
 
+
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -8,7 +9,7 @@ import static org.assertj.core.api.Assertions.*;
 
 public class PayUTest {
     @Test
-    public void itAllowsToRegisterOrder() {
+    public void itAllowsToRegisterOrder() throws PayUException {
         //Arrange
         var payu = thereIsPayU();
         var mySystemOrderId = UUID.randomUUID().toString();
@@ -24,7 +25,10 @@ public class PayUTest {
     }
 
     private PayU thereIsPayU() {
-        return new PayU(PayUCredentials.sandbox());
+        return new PayU(
+                PayUCredentials.sandbox(),
+                new JavaHttpPayUApiClient()
+        );
     }
 
     private OrderCreateRequest thereIsExampleOrderCreate(String mySystemOrderId) {
@@ -34,6 +38,7 @@ public class PayUTest {
                 .description("RTV market")
                 .currencyCode("PLN")
                 .totalAmount(21000)
+                .extOrderId(mySystemOrderId)
                 .buyer(Buyer.builder()
                         .email("john.doe@example.com")
                         .phone("654111654")
