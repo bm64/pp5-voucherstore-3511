@@ -1,8 +1,7 @@
 package pl.mbernacik.voucherstore.productcatalog;
 
-import java.math.BigDecimal;
-import java.util.List;
-import java.util.UUID;
+
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -54,5 +53,10 @@ public class ProductCatalogFacade {
     private Product getProductOrException(String productId) {
         return productStorage.getById(productId)
                 .orElseThrow(() -> new ProductNotFoundException(String.format("There is no product with id: %s", productId)));
+    }
+
+    @Transactional
+    public void emptyCatalog() {
+        productStorage.clear();
     }
 }
