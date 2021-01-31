@@ -9,6 +9,8 @@ import pl.mbernacik.payu.PayUCredentials;
 import pl.mbernacik.voucherstore.productcatalog.ProductCatalogFacade;
 import pl.mbernacik.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mbernacik.voucherstore.sales.offer.OfferMaker;
+import pl.mbernacik.voucherstore.sales.payment.PayUPaymentGateway;
+import pl.mbernacik.voucherstore.sales.payment.PaymentGateway;
 import pl.mbernacik.voucherstore.sales.product.ProductCatalogProductDetailsProvider;
 import pl.mbernacik.voucherstore.sales.product.ProductDetailsProvider;
 

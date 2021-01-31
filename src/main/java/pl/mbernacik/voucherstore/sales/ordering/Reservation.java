@@ -1,4 +1,4 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.ordering;
 
 import pl.mbernacik.voucherstore.sales.offer.Offer;
 

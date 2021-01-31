@@ -6,6 +6,13 @@ import pl.mbernacik.voucherstore.sales.basket.Basket;
 import pl.mbernacik.voucherstore.sales.basket.InMemoryBasketStorage;
 import pl.mbernacik.voucherstore.sales.offer.Offer;
 import pl.mbernacik.voucherstore.sales.offer.OfferMaker;
+import pl.mbernacik.voucherstore.sales.ordering.ClientData;
+import pl.mbernacik.voucherstore.sales.ordering.OfferChangedException;
+import pl.mbernacik.voucherstore.sales.ordering.Reservation;
+import pl.mbernacik.voucherstore.sales.payment.PaymentDetails;
+import pl.mbernacik.voucherstore.sales.payment.PaymentGateway;
+import pl.mbernacik.voucherstore.sales.payment.PaymentUpdateStatusRequest;
+import pl.mbernacik.voucherstore.sales.payment.PaymentVerificationException;
 
 public class SalesFacade {
 
@@ -45,7 +52,7 @@ public class SalesFacade {
         return offerMaker.calculateOffer(basket.getBasketItems());
     }
 
-    public ReservationPaymentDetails acceptOffer(Offer seenOffer, ClientData clientData) {
+    public PaymentDetails acceptOffer(Offer seenOffer, ClientData clientData) {
         Basket basket = basketStorage.loadForCustomer(getCurrentCustomerId())
                 .orElse(Basket.empty());
 
@@ -57,7 +64,7 @@ public class SalesFacade {
 
         Reservation reservation = Reservation.of(currentOffer, clientData);
 
-        ReservationPaymentDetails reservationPaymentDetails = paymentGateway.register(reservation);
+        PaymentDetails reservationPaymentDetails = paymentGateway.register(reservation);
 
         return  reservationPaymentDetails;
     }

@@ -5,6 +5,8 @@ package pl.mbernacik.voucherstore.sales;
 import org.junit.Before;
 import org.junit.Test;
 import pl.mbernacik.voucherstore.sales.offer.Offer;
+import pl.mbernacik.voucherstore.sales.ordering.ClientData;
+import pl.mbernacik.voucherstore.sales.payment.PaymentDetails;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -34,7 +36,7 @@ public class OrderingTest extends SalesTestCase {
         salesFacade.addProduct(productId2);
         Offer seenOffer = salesFacade.getCurrentOffer();
 
-        ReservationPaymentDetails paymentDetails = salesFacade.acceptOffer(seenOffer, clientProvideHisData());
+        PaymentDetails paymentDetails = salesFacade.acceptOffer(seenOffer, clientProvideHisData());
 
         thereIsPendingReservationWithId(paymentDetails.getReservationId());
         thereIsPaymentRegisteredForReservation(paymentDetails.getReservationId());

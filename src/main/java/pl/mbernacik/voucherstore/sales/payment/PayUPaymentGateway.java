@@ -1,6 +1,7 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.payment;
 
 import pl.mbernacik.payu.PayU;
+import pl.mbernacik.voucherstore.sales.ordering.Reservation;
 
 public class PayUPaymentGateway implements PaymentGateway {
     private final PayU payU;
@@ -9,7 +10,7 @@ public class PayUPaymentGateway implements PaymentGateway {
     }
 
     @Override
-    public ReservationPaymentDetails register(Reservation reservation) {
+    public PaymentDetails register(Reservation reservation) {
         return null;
     }
 

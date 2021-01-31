@@ -1,4 +1,4 @@
-package pl.mbernacik.voucherstore.sales;
+package pl.mbernacik.voucherstore.sales.payment;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @AllArgsConstructor
-public class ReservationPaymentDetails {
+public class PaymentDetails {
     String reservationId;
     String paymentUrl;
 }
